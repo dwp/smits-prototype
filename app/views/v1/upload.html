@@ -1,0 +1,35 @@
+{% extends "v1/layout.html" %}
+
+{% block content %}
+<main id="content" role="main">
+
+  {% set currentPage = 'upload' %}
+  {% include "includes/main_nav.html" %}
+
+  <div class="main-content">
+    <div class="grid-row">
+      <div class="column-full">
+
+          <h1 class="heading-large">Upload data</h1>
+          <form action="search_results" method="get" class="form" id="search-form">
+            <input id="uploadFile" class="form-control" placeholder="Choose File" disabled="disabled" />
+            <div class="fileUpload button">
+                <span>Upload</span>
+                <input id="uploadBtn" type="file" class="upload" />
+            </div>
+          </form>
+
+      </div>
+    </div>
+  </div>
+</main>
+{% endblock %}
+
+{% block page_scripts %}
+<script type="text/javascript">
+  document.getElementById("uploadBtn").onchange = function (e,i) 
+  {
+    document.getElementById("uploadFile").value = this.files[0].name;
+  };
+</script>
+{% endblock %}
