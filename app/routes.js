@@ -6,7 +6,7 @@ router.get('/', function (req, res) {
   res.render('index')
 })
 
-router.get('/v1/person', function (req, res, next) {
+router.get('/v1/person*', function (req, res, next) {
   req.data = req.data || { };
   req.data = { nino: req.query.nino };
   next();

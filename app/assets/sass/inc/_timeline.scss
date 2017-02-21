@@ -71,7 +71,10 @@
   width: 94%;
   overflow: hidden;
   &:first-of-type {    
-    p.status { font-size:1.7em; color:black; font-weight:700}
+    p.status { 
+      font-size:1.7em; 
+      color:black; 
+      font-weight:700}
   }
 }
 
