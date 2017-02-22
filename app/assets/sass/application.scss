@@ -48,3 +48,10 @@ $path: "/public/images/";
   top:2px;
   margin:0 5px;
 }
+.button--blue {
+  background-color:$govuk-blue;
+  box-shadow:0 2px 0 darken($govuk-blue,20);
+  &:hover {
+    background-color:darken($govuk-blue,6);
+  }
+}
