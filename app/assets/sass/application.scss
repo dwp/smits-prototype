@@ -41,13 +41,3 @@ $path: "/public/images/";
   // border-left:1px solid $grey-2;
   // padding-left:1em;
 }
-
-.alert-default {
-  border-color: $light-blue;
-  background-color: mix(white, $light-blue, 90%);
-}
-
-.alert-success {
-  border-color: $turquoise;
-  background-color: mix(white, $turquoise, 90%);
-}
