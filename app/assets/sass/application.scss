@@ -41,3 +41,10 @@ $path: "/public/images/";
   // border-left:1px solid $grey-2;
   // padding-left:1em;
 }
+.pipe {
+  position:relative;
+  display:inline-block;
+  color:$grey-1;
+  top:2px;
+  margin:0 5px;
+}

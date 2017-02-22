@@ -9,20 +9,34 @@
   <div class="main-content">
 
     <div class="grid-row">
-      <div class="column-full">
+      <div class="column-third">
 
         <h1 class="heading-xlarge">
           Support for mortgage interest
           <span class="heading-secondary">Prototype</span>
         </h1>
 
-        <h3 class="heading-small">Version 1</h3>
         <ul class="list">
-          <li><a href="/v1/search">Search</a></li>
-          <li><a href="/v1/upload">Upload</a></li>
-          <li><a href="/v1/person-1?nino=QQ122334C">Person 1</a></li>
-          <li><a href="/v1/person-2?nino=QQ122334C">Person 2</a></li>
-          <li><a href="/v1/person-3?nino=QQ122334C">Person 3</a></li>
+          <li>
+            <a href="/v1/search">Search</a>
+            <p class="form-hint">Type in a NINO and search for a person.</p>
+          </li>
+          <li>
+            <a href="/v1/person-1?nino=QQ122334C">Person 1</a>
+            <p class="form-hint">Example person page, showing someone who has gone right through the process and agreed to the loan.</p>
+          </li>
+          <li>
+            <a href="/v1/person-2?nino=QQ122334C">Person 2</a>
+            <p class="form-hint">Example person page, showing someone mid-process who has been just been sent the warm up letter.</p>
+          </li>
+          <li>
+            <a href="/v1/person-3?nino=QQ122334C">Person 3</a>
+            <p class="form-hint">Example person page, showing someone who has been contacted by the Information Provider but has decided not to proceed.</p>
+          </li>
+          <li>
+            <a href="/v1/upload">Upload</a>
+            <p class="form-hint">Admin page used by the team to upload the data files that we recieved from data warehouse.</p>
+          </li>
         </ul>
 
       </div><!-- column -->
