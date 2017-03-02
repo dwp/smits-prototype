@@ -11,6 +11,17 @@
       <div class="column-full">
 
           <h1 class="heading-large">Upload data</h1>
+
+          <div class="error-summary">
+            <h1 class="heading-medium error-summary-heading">
+              The file you uploaded was not a proper CSV file
+            </h1>
+            <p>Try again, or choose a different file</p>
+            {# <ul class="error-summary-list">
+              <li><a href="#searchbox">Check whether you typed it wrong.</a></li>
+            </ul> #}
+          </div>
+
           <form action="upload-results" method="post" class="form" id="search-form">
             <div class="form-group">
               <input id="uploadFile" class="form-control" placeholder="Choose a file" disabled="disabled" />

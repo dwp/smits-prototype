@@ -12,6 +12,13 @@ router.get('/v1/person*', function (req, res, next) {
   next();
 })
 
+/*
+  Redirect all posts to gets.
+*/
+router.post(/^\/([^.]+)$/, function (req, res) {
+  var path = (req.params[0]);
+  res.redirect('/'+path);
+});
 // add your routes here
 
 module.exports = router
