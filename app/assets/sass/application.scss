@@ -55,7 +55,8 @@ $path: "/public/images/";
     background-color:darken($govuk-blue,6);
   }
 }
-td.first {
-  font-size:16px;
-  padding-left:10px;
+td,th {
+  &.first {
+    padding-left:10px;
+  }
 }

@@ -13,10 +13,6 @@
 
       <div class="column-full">
 
-        <div class="panel panel-border-wide alert-success" style="margin-top:20px;">
-          <p>Tranche created</p>
-        </div>
-
         <h1 class="heading-large">Tranches</h1>
 
         <table>
@@ -55,23 +51,4 @@
   </div><!-- .main-content -->
   </form>
 </main>
-{% endblock %}
-
-{% block page_scripts %}
-<script type="text/javascript">
-$(document).on('ready',function()
-{
-  $('tr').eq(1).css('backgroundColor','hsl(39,100%,64%');
-
-  var d = 500;
-  for(var i=64; i<=100; i=i+0.1){
-    d  += 3;
-    (function(ii,dd){
-        setTimeout(function(){
-            $('tr').eq(1).css('backgroundColor','hsl(39,100%,'+ii+'%)');
-        }, dd);
-    })(i,d);
-  }
-});
-</script>
 {% endblock %}
