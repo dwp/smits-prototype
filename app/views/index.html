@@ -1,71 +1,86 @@
 {% extends "layout.html" %}
 
-{% block propositionHeader %}
-  {% include "includes/propositional_navigation.html" %}
-{% endblock %}
-
 {% block content %}
+
+<div class="index">
+
+<div class="index-page-banner">
+  <div class="index-heading-wrapper">
+    <h1 class="heading-xlarge index-heading-xlarge">Support for Mortgage Interest</h1>
+    <h2 class="heading-large index-heading-large">Prototypes</h2>
+  </div>
+</div>
+
 <main id="content" role="main">
-  <div class="main-content">
+
+    {% include "includes/phase_banner_alpha.html" %}
+
+    <div class="grid-row mt1">
+
+        <div class="column-third">
+          <p class="mb0">Current version</p>
+          <h3 class="heading-medium mt0">Prototype 2</h3>
+        </div>
+
+        <div class="column-third">
+          <p class="mb0">Date of release</p>
+          <h3 class="heading-medium mt0">20th March 2017</h3>
+        </div>
+
+        <div class="column-third">
+          <details>
+            <summary><span class="summary">Quick links</span></summary>
+            <div class="quicklinks">
+              <ul>
+                <a href="/v2/search">Search</a><br />
+                <a href="/v2/search-none">Search (none found)</a><br />
+                <a href="/v2/person-1?nino=QQ122334C">Person (example 1)</a><br />
+                <a href="/v2/person-2?nino=QQ122334C">Person (example 2)</a><br />
+                <a href="/v2/person-3?nino=QQ122334C">Person (example 3)</a><br />
+                <a href="/v2/upload">Upload data</a><br />
+                <a href="/v2/upload-error">Upload (error message)</a><br />
+                <a href="/v2/upload-results">Upload (success)</a><br />
+                <a href="/v2/tranche">Create tranche</a><br />
+                <a href="/v2/tranche-created">Tranche created</a><br />
+              </ul>
+            </div>
+          </details>
+        </div>
+
+        <div class="column-full">
+
+          <a href="/v2/search" class="button button-start">Launch prototype</a>
+
+          <h3 class="heading-medium mt1 mb0">Changes Made</h3>
+          <ul class="list list-bullet changes mb1">
+            <li>&nbsp;</li>
+          </ul>
+
+        </div>
+
+    </div>
 
     <div class="grid-row">
-      <div class="column-third">
+      <div class="column-full">
 
-        <h1 class="heading-xlarge">
-          Support for mortgage interest
-          <span class="heading-secondary">Prototype</span>
-        </h1>
+        <div style="border-bottom: 1px solid #bfc1c3;">&nbsp;</div>
+        <h2 class="heading-medium">Older versions</h2>
 
-        <ul class="list">
-          <li>
-            <a href="/v1/search">Search</a>
-            <p class="form-hint">Type in a NINO and search for a person.</p>
-          </li>
-          <li>
-            <a href="/v1/search-none">Search (not found)</a>
-            <p class="form-hint">If no one is found show a message and allow the user to change their search (in case of typos).</p>
-          </li>
-          <li>
-            <a href="/v1/person-1?nino=QQ122334C">Person 1</a>
-            <p class="form-hint">Example person page, showing someone who has gone right through the process and agreed to the loan.</p>
-          </li>
-          <li>
-            <a href="/v1/person-2?nino=QQ122334C">Person 2</a>
-            <p class="form-hint">Example person page, showing someone mid-process who has been just been sent the warm up letter.</p>
-          </li>
-          <li>
-            <a href="/v1/person-3?nino=QQ122334C">Person 3</a>
-            <p class="form-hint">Example person page, showing someone who has been contacted by the Information Provider but has decided not to proceed.</p>
-          </li>
-          <li>
-            <a href="/v1/upload">Upload</a>
-            <p class="form-hint">Admin page used by the team to upload the data files that we recieved from data warehouse.</p>
-          </li>
-          <li>
-            <a href="/v1/upload-error">Upload error</a>
-            <p class="form-hint">If there is a problem with the file that's been uploaded.</p>
-          </li>
-          <li>
-            <a href="/v1/upload-results">Upload results</a>
-            <p class="form-hint">When the upload has been done successfulled</p>
-          </li>
-          <li>
-            <a href="/v1/tranche">List of tranches</a>
-            <p class="form-hint">A page showing all the tranches created and allowing a user to download the relevant data files for sending to the Information or Letter Providers.</p>
-          </li>
-          <li>
-            <a href="/v1/tranche">Create a tranche</a>
-            <p class="form-hint">A page used by the team to identify people and create the different tranches based on number and benefit type.</p>
-          </li>
-          <li>
-            <a href="/v1/tranche-created">Tranche created</a>
-            <p class="form-hint">A page shown after a new tranche is created.</p>
-          </li>
-        </ul>
+        <details>
+          <summary><span class="summary">View older prototypes</span></summary>
+          <div>
+
+            <!--- START OF VERSIONS --->
+            {% include "v1/inc_index.html" %}
+
+            <!--- END OF VERSIONS --->
+          </div>
+        </details>
 
       </div><!-- column -->
     </div><!-- row -->
 
-  </div>
 </main>
+
+</div><!-- .index -->
 {% endblock %}

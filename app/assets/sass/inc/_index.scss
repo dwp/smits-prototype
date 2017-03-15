@@ -1,0 +1,69 @@
+/// Style specifically for index page
+.index-page-banner {
+  background-color: $govuk-blue;
+  color: $white;
+  // margin-bottom: $gutter;
+}
+
+.index-heading-wrapper {
+  margin: 0 auto;
+  max-width: 968px;
+}
+
+.index-heading-xlarge {
+  margin: 0;
+  padding: 3rem 0 1rem;
+  font-size:64px;
+  text-shadow: 0px 1px 2px rgba(black,0.42);
+}
+
+.index-heading-large {
+  margin: 0;
+  padding: 1rem 0 3rem;
+  font-weight: normal;
+}
+
+@media screen and (max-width: 1020px) {
+  .index-heading-xlarge,
+  .index-heading-large {
+    margin-left: $gutter;
+  }
+}
+
+@media screen and (max-width: 640px) {
+  .index-heading-xlarge,
+  .index-heading-large {
+    margin-left: $gutter / 2;
+  }
+}
+
+.phase-banner .tag--red {
+  background-color:$mellow-red;
+}
+
+.mt0 { margin-top:0 !important; }
+.mb0 { margin-bottom:0 !important; }
+.mth { margin-top:$gutter/2 !important; }
+.mbh { margin-bottom:$gutter/2 !important; }
+.mt1 { margin-top:$gutter !important; }
+.mb1 { margin-bottom:$gutter !important; }
+.mt2 { margin-top:2*$gutter !important; }
+.mb2 { margin-bottom:2*$gutter !important; }
+
+.button-grey {
+  &:link,&:visited {
+    color:black;
+    background-color:$grey-3;
+    box-shadow: 0 2px 0 darken($grey-3,40);
+  }
+  &:active,&:hover {
+    background-color:darken($grey-3,5);
+  }
+
+}
+.version {
+  border-bottom: 1px solid #bfc1c3;
+}
+.changes {
+  font-size:16px;
+}
