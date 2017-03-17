@@ -9,12 +9,11 @@ router.get('/', function (req, res) {
 router.get('/v*/dosearch/',function(req,res,next)
 {
   var v = req.params[0];
-  if (req.query.nino == 'QQ123456C') res.redirect('/v'+v+"/person-1?nino=QQ123456C")
-  else if (req.query.nino == 'GB654321C') res.redirect('/v'+v+"/person-2?nino=GB654321C")
+
+  if (req.query.nino == 'GB654321C') res.redirect('/v'+v+"/person-2?nino=GB654321C")
   else if (req.query.nino == 'ZZ918273C') res.redirect('/v'+v+"/person-3?nino=ZZ918273C")
-  else {
-    next();
-  }
+  else res.redirect('/v'+v+"/person-1?nino=QQ123456C")
+  
 });
 
 router.get('/v*/person*', function (req, res, next) {
