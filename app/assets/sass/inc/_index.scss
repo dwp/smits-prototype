@@ -21,6 +21,11 @@
   margin: 0;
   padding: 1rem 0 3rem;
   font-weight: normal;
+  font-size:1.62em;
+  font-weight:bold;
+  letter-spacing:0.2em;
+  opacity:0.86;
+  text-transform: uppercase;
 }
 
 @media screen and (max-width: 1020px) {
@@ -40,15 +45,6 @@
 .phase-banner .tag--red {
   background-color:$mellow-red;
 }
-
-.mt0 { margin-top:0 !important; }
-.mb0 { margin-bottom:0 !important; }
-.mth { margin-top:$gutter/2 !important; }
-.mbh { margin-bottom:$gutter/2 !important; }
-.mt1 { margin-top:$gutter !important; }
-.mb1 { margin-bottom:$gutter !important; }
-.mt2 { margin-top:2*$gutter !important; }
-.mb2 { margin-bottom:2*$gutter !important; }
 
 .button-grey {
   &:link,&:visited {

@@ -1,4 +1,4 @@
-{% extends "v1/layout.html" %}
+{% extends "v2/layout.html" %}
 
 {% block content %}
 <main id="content" role="main">
@@ -13,7 +13,7 @@
 
         <h1 class="heading-xlarge" style="margin-bottom:30px">
           Robbie Roberts
-          <span class="heading-secondary">{{ nino }}</span>
+          <span class="heading-secondary">{{ nino | default('QQ 12 34 56 C') }}</span>
         </h1>
 
         <div class="panel panel-border-wide alert-warning">This person does not wish to proceed with a loan, please arrange for Mortgage Interest payments to cease on 'A' day.</div>
@@ -22,28 +22,22 @@
 
           <span class="line"></span>
           <div class="timeline-event">
-            <h3 class="heading-small">Thursday, 7th June 2017</h3>
-            <p class="status">Contacted by information provider</p>
+            <h3 class="heading-small">Contacted by information provider</h3>
+            <p class="status">Thursday, 7th June 2017</p>
             <p class="panel panel-border-wide alert-warning">Does not wish to proceed</p>
           </div>
 
           <span class="line"></span>
           <div class="timeline-event">
-            <h3 class="heading-small">Thursday, 1st June 2017</h3>
-            <p class="status">Contacted by information provider</p>
+            <h3 class="heading-small">Contacted by information provider</h3>
+            <p class="status">Thursday, 1st June 2017</p>
             <p class="panel panel-border-wide alert-default">No response - message left on voicemail</p>
           </div>
 
           <span class="line"></span>
           <div class="timeline-event">
-            <h3 class="heading-small">Thursday, 18th May 2017</h3>
-            <p>Warm up letter sent</p>
-          </div>
-
-          <span class="line"></span>
-          <div class="timeline-event">
-            <h3 class="heading-small">Thursday, 12th May 2017</h3>
-            <p>Details sent to letter provider</p>
+            <h3 class="heading-small">Details sent to letter provider &amp; information provider</h3>
+            <p>Thursday, 12th May 2017</p>
           </div>
 
           <div style="clear:both"></div>
@@ -55,6 +49,9 @@
 
       <div class="column-third">
         <div class="left-aside">
+
+          <a href="#" class="button mt1 mb1" disabled="disabled">Agreement returned</a>
+
           <h3 class="heading-small">Date of birth</h3> <p>16th October 1992</p>
           <h3 class="heading-small">Address</h3> <p>Flat 1<br />Chambers St</br >Edinburgh<br />KD12 9FT</p>
           <h3 class="heading-small">Phone number</h3> <p>0777 555 008</p>

@@ -9,6 +9,9 @@ $path: "/public/images/";
 // Add extra styles here, or re-organise the Sass files in whichever way makes most sense to you
 @import "admin";
 @import "inc/timeline";
+@import "inc/small-checkboxes";
+@import "inc/margins";
+@import "inc/toggler";
 
 .fileUpload {
     position: relative;
@@ -58,5 +61,15 @@ $path: "/public/images/";
 td,th {
   &.first {
     padding-left:10px;
+  }
+}
+
+/*  Override timeline stuff */
+.timeline .timeline-event {
+  &:first-of-type .heading-small {
+    position:relative;
+    top:-6px;
+    font-size:36px;
+    margin-bottom:0
   }
 }
