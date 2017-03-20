@@ -12,6 +12,7 @@ $path: "/public/images/";
 @import "inc/small-checkboxes";
 @import "inc/margins";
 @import "inc/toggler";
+@import "inc/form-select";
 
 .fileUpload {
     position: relative;
@@ -72,4 +73,19 @@ td,th {
     font-size:36px;
     margin-bottom:0
   }
+}
+
+.button-add:link, .button-add:visited {
+  font-size: 18px;
+  background-color: #005ea5;
+  padding: 7px 10px 5px;
+  box-shadow: #00243f 0px 2px 0px 0px;
+}
+.cond {
+  width:62%;
+}
+
+.inline-form {
+  padding:0 0 20px 15px;
+  background-color:$grey-3;
 }
