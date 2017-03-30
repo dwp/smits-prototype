@@ -144,6 +144,7 @@ if (typeof (routes) !== 'function') {
   console.log('Warning: the use of bind in routes is deprecated - please check the prototype kit documentation for writing routes.')
   routes.bind(app)
 } else {
+  app.use('/application/v1/', require(__dirname+'/app/views/application/v1/routes.js') )
   app.use('/', routes)
 }
 
@@ -206,9 +207,7 @@ utils.findAvailablePort(app, function (port) {
         ui: false,
         files: ['public/**/*.*', 'app/views/**/*.*'],
         ghostmode: false,
-        open: false,
-        notify: false,
-        logLevel: 'error'
+        open: false
       })
     })
   }
