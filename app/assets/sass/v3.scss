@@ -99,3 +99,18 @@ td,th {
   padding-top:45px;
   float:right;
 }
+
+.done-highlight {
+  display:block;
+  margin:30px 0;
+  padding:8px 10px 5px;
+  color:$black;
+  background-color:$yellow;
+  p {margin:0}
+  .close-x {float:right}
+  &:hover {
+    cursor:pointer;
+    color:$black;
+    .close-x {color:white}
+  }
+}

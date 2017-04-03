@@ -1,0 +1,52 @@
+{% extends path+"/layout.html" %}
+
+{% block content %}
+<main id="content" role="main">
+
+  {% set currentPage = 'upload' %}
+  {% include "includes/main_nav.html" %}
+
+  <div class="main-content">
+    <div class="grid-row">
+      <div class="column-full">
+
+          <h1 class="heading-large">Upload data</h1>
+
+          <div class="error-summary">
+            <h1 class="heading-medium error-summary-heading">
+              The file you uploaded was not a proper CSV file
+            </h1>
+            <p>Try again or choose a different file</p>
+            {# <ul class="error-summary-list">
+              <li><a href="#searchbox">Check whether you typed it wrong.</a></li>
+            </ul> #}
+          </div>
+
+          <form action="upload-results" method="post" class="form" id="search-form">
+            <div class="form-group">
+              <input id="uploadFile" class="form-control" placeholder="Choose a file" disabled="disabled" />
+              <div class="fileUpload button button--blue">
+                  <span>Choose a file</span>
+                  <input id="uploadBtn" type="file" class="upload" />
+              </div>
+            </div>
+
+            <div class="form-group">
+              <input type="submit" class="button" value="Upload" />
+            </div>
+          </form>
+
+      </div>
+    </div>
+  </div>
+</main>
+{% endblock %}
+
+{% block page_scripts %}
+<script type="text/javascript">
+  document.getElementById("uploadBtn").onchange = function (e,i)
+  {
+    document.getElementById("uploadFile").value = this.files[0].name;
+  };
+</script>
+{% endblock %}
