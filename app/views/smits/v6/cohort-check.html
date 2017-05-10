@@ -1,0 +1,31 @@
+{% extends path+"/inc/layout.html" %}
+
+{% block content %}
+<main id="content" role="main">
+
+  {% set currentPage = 'search' %}
+  {% include path+"/inc/main_nav.html" %}
+
+  <form class="form" action="cohort-check" method="get">
+    <div class="main-content">
+      <div class="grid-row">
+        <div class="column-third">
+
+          <div class="panel panel-border-wide alert-default mt1">365 people found.</div>
+
+          <h1 class="heading-large mt1">Create this cohort</h1>
+
+          <div class="form-group">
+            <label for="cohort_name" class="form-label-bold">Cohort name</label>
+            <input name="cohort_name" class="form-control form-control-3-4" value="cohort_13042017"/>
+          </div>
+
+          <a class="button" href="cohort-created">Save</a>
+
+        </div><!-- column -->
+      </div><!-- row -->
+    </div><!-- .main-content -->
+
+  </form>
+</main>
+{% endblock %}

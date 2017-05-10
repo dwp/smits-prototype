@@ -1,0 +1,176 @@
+{% extends path+"/inc/layout.html" %}
+
+{% block content %}
+<main id="content" role="main">
+
+  {% set currentPage = 'claimant' %}
+  {% include path+"/inc/main_nav.html" %}
+
+  <div class="main-content">
+    <div class="grid-row">
+
+      <div class="column-two-thirds">
+
+        <div class="fright">
+          <p class="back-link"><a href="javascript:history.go(-1);">Back</a></p>
+        </div>
+
+        <h1 class="heading-xlarge" style="margin-bottom:30px">
+          Jamie Rees
+          <span class="heading-secondary">{{ nino | default('QQ123456C',true) }}</span>
+        </h1>
+
+        <form class="form">
+
+          <div class="">
+
+            <h2 class="heading-medium mtq">What's changed?</h2>
+
+            <div class="grid-row">
+              <div class="column-half">
+
+                <div class="form-group">
+                  <!-- LOAN AGREEMENT -->
+                  <label for="loan_agg" class="block-label selection-button-checkbox" data-target="loan_agg_status">
+                    <input id="loan_agg" type="checkbox" name="you-contact-pref" value="email">
+                    Loan agreement
+                  </label>
+                  <fieldset class="mt1 js-hidden" id="loan_agg_status">
+                    <div class="panel form-group panel-indent mid-form">
+                      <label class="form-label" for="email-address">New status</label>
+                      <select class="form-select mb0" >
+                        <option>Returned complete</option>
+                        <option>Returned to customer</option>
+                      </select>
+                    </div>
+                  </fieldset>
+
+                  <!-- Charge Doc -->
+                  <label for="chareg_doc" class="block-label selection-button-checkbox" data-target="chareg_doc_status">
+                    <input id="chareg_doc" type="checkbox" name="you-contact-pref" value="email">
+                    Charge form
+                  </label>
+                  <fieldset class="mt1 js-hidden" id="chareg_doc_status">
+                    <div class="panel form-group panel-indent mid-form">
+                      <label class="form-label" for="email-address">New status</label>
+                      <select class="form-select mb0" >
+                          <option>Returned complete</option>
+                          <option>Returned to customer</option>
+                        </select>
+                    </div>
+                  </fieldset>
+
+                  <!-- Change Mind -->
+                  <label for="mind_change" class="block-label selection-button-checkbox" data-target="mind_change_status">
+                    <input id="mind_change" type="checkbox" name="you-contact-pref" value="email">
+                    Change of mind
+                  </label>
+                  <fieldset class="mt1 js-hidden" id="mind_change_status">
+                    <div class="panel form-group panel-indent mid-form">
+                      <label class="form-label" for="email-address">New status</label>
+                      <select class="form-select mb0" >
+                        <option>Declined</option>
+                        <option>Agreed</option>
+                        <option>Undecided</option>
+                      </select>
+                    </div>
+                  </fieldset>
+
+                  <!-- Hold status-->
+                  <label for="hold" class="block-label selection-button-checkbox" data-target="hold_status">
+                    <input id="hold" type="checkbox" name="you-contact-pref" value="email">
+                   Place on hold
+                  </label>
+                  <fieldset class="mt1 js-hidden" id="hold_status">
+                    <div class="panel form-group panel-indent mid-form">
+                      <label class="form-label" for="email-address">New status</label>
+                      <select class="form-select mb0" >
+                        <option>Hold progress</option>
+                        <option>Release hold</option>
+                      </select>
+                    </div>
+                  </fieldset>      
+
+                   <!-- Re-referral -->
+                  <label for="rerefer" class="block-label selection-button-checkbox" data-target="rerefer_status">
+                    <input id="rerefer" type="checkbox" name="you-contact-pref" value="email">
+                   Re-referral
+                  </label>
+                  <fieldset class="mt1 js-hidden" id="rerefer_status">
+                    <div class="panel form-group panel-indent mid-form">
+                      <label class="form-label" for="email-address">New status</label>
+                      <select class="form-select mb0" >
+                        <option>Send letter, call and re-issue forms</option>
+                        <option>Call and re-issue forms</option>
+                        <option>No call, re-issue forms and summary</option>
+                      </select>
+                    </div>
+                  </fieldset>                             
+
+                </div><!-- form-group -->
+
+                <div class="form-group">
+                  <fieldset>
+                    <legend><span class="form-label-bold">Date</span></legend>
+                    <div class="form-date">
+                      <div class="form-group form-group-day">
+                        <label class="form-label" for="dob-day">Day</label>
+                        <input class="form-control" id="dob-day" name="dob-day" type="number" pattern="[0-9]*" min="0" max="31" aria-describedby="dob-hint">
+                      </div>
+                      <div class="form-group form-group-month">
+                        <label class="form-label" for="dob-month">Month</label>
+                        <input class="form-control" id="dob-month" name="dob-month" type="number" pattern="[0-9]*" min="0" max="12">
+                      </div>
+                      <div class="form-group form-group-year">
+                        <label class="form-label" for="dob-year">Year</label>
+                        <input class="form-control" id="dob-year" name="dob-year" type="number" pattern="[0-9]*" min="0" max="2016">
+                      </div>
+                    </div>
+                  </fieldset>
+                </div>
+
+                <p class="mth mb0"><a href="person-1_donestatus" class="button">Save and Continue</a></p>
+
+              </div><!-- column -->
+              <div class="column-half">
+
+
+
+              </div><!-- column -->
+            </div><!-- row -->
+
+          </div><!-- grey-box -->
+
+          {# <div class="grey-box cf">
+            <div class="form-group mb0">
+              <fieldset>
+                <legend><span class="form-label-bold">Link to Loan Agreement</span></legend>
+                <input class="form-control mb0" name="loan_agreement_link" style="width:75%"/>
+              </fieldset>
+              <p class="mth mb0"><a href="person-1_donelink" class="button">Save link</a></p>
+            </div>
+          </div> #}
+
+          {# <div class="grey-box cf">
+            <div class="form-group mb0">
+              <fieldset>
+                <legend><span class="form-label-bold">Link to Change form</span></legend>
+                <input class="form-control mb0" name="loan_agreement_link" style="width:75%"/>
+              </fieldset>
+              <p class="mth mb0"><a href="person-1_donelink" class="button">Save link</a></p>
+            </div>
+          </div> #}
+
+        </form>
+
+      </div><!-- column -->
+
+      <div class="column-third">
+
+
+      </div><!-- column -->
+
+    </div><!-- row -->
+  </div>
+</main>
+{% endblock %}
