@@ -1,18 +1,18 @@
 <div class="version">
   <div class="grid-row">
 
-    {% set n = 6 %}
+    {% set n = 7 %}
 
     <div class="mt1"></div>
 
     <div class="column-third">
       <p class="mb0">Version</p>
-      <h3 class="heading-small mt0 mb0">Prototype v{{n}}</h3>
+      <h3 class="heading-medium mt0 mb0">Prototype v{{n}}</h3>
     </div>
 
     <div class="column-third">
       <p class="mb0">Date of release</p>
-      <h3 class="heading-small mt0 mb0">9 May 2017</h3>
+      <h3 class="heading-medium mt0 mb0">12 May 2017</h3>
     </div>
 
     <div class="column-third">
@@ -27,24 +27,27 @@
             <a href="/smits/v{{n}}/person-1_donestatus">Person (example 1)</a><br />
             <a href="/smits/v{{n}}/person-2?nino=QQ122334C">Person (example 2)</a><br />
             <a href="/smits/v{{n}}/person-3?nino=QQ122334C">Person (example 3)</a><br />
+            <a href="/smits/v{{n}}/person-4?nino=QQ122334C">Person (example 4)</a><br />
+            <a href="/smits/v{{n}}/person-5?nino=QQ122334C">Person (example 5)</a><br />
             <a href="/smits/v{{n}}/upload">Upload data</a><br />
             <a href="/smits/v{{n}}/upload-error">Upload (error message)</a><br />
             <a href="/smits/v{{n}}/upload-results">Upload (success)</a><br />
-            <a href="/smits/v{{n}}/cohort">Create cohort</a><br />
-            <a href="/smits/v{{n}}/cohort-check">Create cohort</a><br />
-            <a href="/smits/v{{n}}/cohort-list">cohort list</a><br />
-            <a href="/smits/v{{n}}/cohort-created">cohort created</a><br />
+            <a href="/smits/v{{n}}/batch">Create batch</a><br />
+            <a href="/smits/v{{n}}/batch-check">Create batch</a><br />
+            <a href="/smits/v{{n}}/batch-list">Batch list</a><br />
+            <a href="/smits/v{{n}}/batch-created">Batch created</a><br />
           </ul>
         </div>
       </details>
     </div>
 
     <div class="column-two-thirds">
-      <a href="/smits/v{{n}}/search" class="button button-grey mth mb1">Launch prototype</a>
+      <a href="/smits/v{{n}}/search" class="button button-start mth mb1">Launch prototype</a>
       <h3 class="heading-small mth">Changes made</h3>
       <ul class="list list-bullet changes mb1">
-        <li>Added to new persons to demonstrate how Manually Hold and System Hold would look.</li>
-        <li>Changes to <a href="/smits/v6/person-edit">edit screen</a> to include Hold and Re-referral options</li> 
+        <li>Changes to <a href="/smits/v7/person-edit">edit screen</a> to make it clearer with a Hold button and Re-referral options in three distinct sections</li>
+        <li>User pages created to reflect <a href="/smits/v7/person-4">Manual hold</a> and <a href="/smits/v7/person-5">System hold</a></li>   
+        <li>Changes of all mentions of Cohort to Batch</li>                    
       </ul>
     </div>
 
