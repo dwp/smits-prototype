@@ -1,0 +1,61 @@
+{% extends path+"/inc/layout.html" %}
+
+{% block content %}
+<main id="content" role="main">
+
+  {% set currentPage = 'search' %}
+  {% include path+"/inc/main_nav.html" %}
+
+  <form class="form" action="batch-check" method="get">
+
+  <div class="main-content">
+    <div class="grid-row">
+
+      <div class="column-full">
+        <h1 class="heading-large">Find a Batch</h1>
+      </div><!-- column -->
+
+      <div class="column-third">
+
+          <div class="form-group">
+            <label for="no_peeps" class="form-label-bold">How many people do you want to select?</label>
+            <input class="form-control" id="no_peeps" type="number" pattern="[0-9]*" min="0" style="width:100px">
+          </div>
+
+          <div class="form-group" style="padding-top:10px">
+            <label class="form-label-bold" style="margin-bottom:10px">Which benefit should they be receiving?
+</label>
+            <fieldset>
+              <label class="block-label selection-button-checkbox" for="benefit_pc">
+                <input id="benefit_pc" type="checkbox" name="benefit" value="Pension Credit">
+                Pension Credit
+              </label>
+              <label class="block-label selection-button-checkbox" for="benefit_is">
+                <input id="benefit_is" type="checkbox" name="benefit" value="Income Support">
+                Income Support
+              </label>
+              <label class="block-label selection-button-checkbox" for="benefit_jsa">
+                <input id="benefit_jsa" type="checkbox" name="benefit" value="Job Seekers Allowance">
+                Job Seekers Allowance
+              </label>
+              <label class="block-label selection-button-checkbox" for="benefit_uc">
+                <input id="benefit_uc" type="checkbox" name="benefit" value="Universal Credit">
+                Universal Credit
+              </label>
+              <label class="block-label selection-button-checkbox" for="benefit_esa">
+                <input id="benefit_esa" type="checkbox" name="benefit" value="Employment Support Allowance">
+                Employment Support Allowance
+              </label>
+            </fieldset>
+          </div>
+
+          <div class="form-group" style="margin-top:10px">
+            <input type="submit" class="button" value="Continue"/>
+          </div>
+
+      </div><!-- column -->
+    </div><!-- row -->
+  </div><!-- .main-content -->
+  </form>
+</main>
+{% endblock %}
