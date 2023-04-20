@@ -34,7 +34,7 @@
     "marked": "^0.3.6",
     "merge": "^1.2.0",
     "minimist": "0.0.8",
-    "nunjucks": "^2.5.2",
+    "nunjucks": "^3.2.4",
     "portscanner": "^1.0.0",
     "prompt": "^0.2.14",
     "readdir": "0.0.6",
